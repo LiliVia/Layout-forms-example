@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+}
+
+ul {
+  display: flex;
+}
+
+ol li,
+ul li {
+  list-style: none;
+  margin: 5px 10px;
+}
+
+ul li a {
+  text-decoration: none;
+}
