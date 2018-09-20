@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Collider</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <header class="fixed">
+    <div class="logo">
+      <h1>Collider</h1>
+    </div>
+    <div class="container">
+      <nav class="main_menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Contacts</a></li>
+        </ul>
+      </nav>
+      <form class="global_search">
+        <input type="text" name="search_text" id="search_text" />
+        <button type="button" name="search_button" id="search_button" value="search"> <i class="fab fa-sistrix"></i>
+        </button>
+      </form>
+    </div>
+  </header>
+
+  <main>
+    <nav id="menu">
+      <ul>
+        <li><a href="#section1" class="item_menu btn">1</a></li>
+        <li><a href="#section2" class="item_menu btn">2</a></li>
+        <li><a href="#section3" class="item_menu btn">3</a></li>
+        <li><a href="#section4" class="item_menu btn active">4</a></li>
+        <li><a href="#section5" class="item_menu btn">5</a></li>
+        <li><a href="#section6" class="item_menu btn">6</a></li>
+        <li><a href="#section7" class="item_menu btn">7</a></li>
+        <li><a href="#section8" class="item_menu btn">8</a></li>
+      </ul>
+    </nav>
+    <section id="#section1" class="main_content">
+      <div class="content">
+        <div class="subcontent_left">
+          <h1>The first virtual real estate marketplace</h1>
+          <p>where buyers are conected & transact directly with the most likely sellers via carefully crafted
+            artificial
+            intelligence algorithms</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="#section2" class="main_content">
+      <div class="content">
+        <div class="subcontent_center stats">
+          <h1>Property sale status report</h1>
+          <div class="container">
+            <table id="stats">
+              <tr>
+                <th>45755</th>
+                <th>5755</th>
+                <th>2745</th>
+                <th>5755</th>
+              </tr>
+              <tr>
+                <td>Property Sale Status Report</td>
+                <td>Signed Confis for the property & received info</td>
+                <td>Have expressed interested to tour</td>
+                <td>Submitted offers</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="#section3" class="main_content">
+      <div class="content">
+        <div class="subcontent_center promo">
+          <h1>Collider</h1>
+          <h3>Analyzing Data</h3>
+        </div>
+      </div>
+    </section>
+    <section id="#section4" class="main_content">
+      <div class="content">
+        <div class="subcontent_left">
+          <h1>Based on provided</h1>
+          <p>info your property is worth in the <span>$5 - 6.2M range</span> Collider has identified 25 most likely
+            buyers</p>
+        </div>
+        <div class="subcontent_rigth">
+          <label>
+            <input type="radio" name="sale" value="buyers" checked> Comparables<br>
+          </label>
+          <label>
+            <input type="radio" name="sale" value="brokers"> Sell with us?<br>
+          </label>
+        </div>
+      </div>
+    </section>
+    <section id="#section5" class="main_content">
+      <div class="content">
+        <div class="subcontent_center asking_price">
+          <form>
+            <div>
+              Asking Price <br>
+              <input type="text" name="price">
+            </div>
+            <div>
+              <input type="file" id="rent-role" name="rent-role" accept=".doc, .docx, .txt, .pdf, .md" multiple>
+              <label for="rent-role" class="btn-attach">
+                <i class="fas fa-paperclip"></i> Attach Rent Roll & Expenses
+              </label>
+            </div>
+            <div>
+              Comments<br>
+              <textarea></textarea>
+            </div>
+            <input type="submit" class="btn active" value="Submit">
+          </form>
+        </div>
+      </div>
+    </section>
+    <section id="#section6" class="main_content">
+      <div class="content">
+        <div class="subcontent_center asquisition">
+          <h1>Tell us more about your asquisition criteria</h1>
+          <form>
+            <div>
+              Neighborhood <br>
+              <input type="text" name="neighborhood">
+            </div>
+            <div>
+              Property Type<br>
+              <input type="text" name="property-type">
+            </div>
+            <div>
+              Minimal Cap Rate<br>
+              <input type="number" name="minimal-rate">
+            </div>
+            <div>
+              Deal Volume<br>
+              <input type="number" name="min-volume" placeholder="Min">
+              <input type="number" name="max-volume" placeholder="Max">
+            </div>
+            <input type="submit" class="btn active" value="Send">
+          </form>
+        </div>
+      </div>
+    </section>
+    <section id="#section7" class="main_content">
+      <div class="content">
+        <div class="subcontent_center report">
+          <h1>We have received your</h1>
+          <ul>
+            <li>Property info</li>
+            <li>Signed Commission Agreement</li>
+            <li>Rent roll & expenses</li>
+            <li>You will receive your first Property Sale Report in 7 days</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="#section8" class="main_content">
+      <div class="content">
+        <div class="subcontent_center preview">
+          <ol>
+            <li>
+              <h2>Tour & Offer</h2>
+              <ul>
+                <li>Schedule Tour</li>
+                <li>Make Offer</li>
+                <li>COR</li>
+                <li>OA</li>
+              </ul>
+            </li>
+            <li>
+              <h2>3d Party Providers for Buyers</h2>
+              <ul>
+                <li>Broker Colider</li>
+                <li>Choose Lender</li>
+                <li>OTS</li>
+                <li>CI</li>
+              </ul>
+            </li>
+            <li>
+              <h2>Contract</h2>
+              <ul>
+                <li>Contract isuued</li>
+                <li>CC</li>
+                <li>Contract Ready</li>
+                <li>Contract Signed</li>
+              </ul>
+            </li>
+            <li>
+              <h2>Closing</h2>
+              <section class="calendar">Calendar with marked days</section>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="fixed">
+    <section class="social_media">
+      <ul>
+        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+        <li><a href="#"><i class="fab fa-google-plus-square"></i></a></li>
+        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+      </ul>
+    </section>
+    <section class="switch_page"><i class="fas fa-arrow-down"></i></section>
+  </footer>
+</body>
+
+</html>
