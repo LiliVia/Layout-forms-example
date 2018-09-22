@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Promo from '../components/Promo';
-import AsqForm from './AsqForm';
+import AsquisForm from './AsquisForm';
 import List from '../components/List';
+import AskingForm from '../components/AskingForm';
 
 import './Main.css';
 
@@ -14,19 +15,36 @@ class Main extends Component {
       minimalRate: "",
       minVolume: "",
       maxVolume: "",
-      pageNav: [1, 2, 3, 4, 5, 6, 7, 8]
+      brokers: null,
+      buyers: null
     };
   }
 
   onHandleChange = event => {
     const target = event.target;
-    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const value = target.value;
     const name = target.name;
 
     this.setState({
       [name]: value
     });
   };
+
+  getBuyers = (e) => {
+    e.preventDefault();
+    this.setState({
+      buyers: "list of buyers"
+    })
+    console.log("list of buyers");
+  }
+  getBrokers = (e) => {
+    e.preventDefault();
+    this.setState({
+      brokers: "list of brokers"
+    })
+    console.log(this.state.brokers);
+
+  }
 
   
 
@@ -35,7 +53,7 @@ class Main extends Component {
       <div className="Main">
         <nav id="menu">
           <List 
-            list={this.state.pageNav}
+            list={[1, 2, 3, 4, 5, 6, 7, 8]}
             type="nav"
             className="item_menu btn"
              />
@@ -78,54 +96,29 @@ class Main extends Component {
           </div>
         </section>
         <section id="#section3" className="main_content">
-        <Promo 
-          name="analize"
-          header="Collider"
-          paragr="Analyzing Data"
-           />
-          
+          <Promo 
+            name="analize"
+            header="Collider"
+            paragr="Analyzing Data"
+            />
+            
         </section>
         <section id="#section4" className="main_content">
-        <Promo name=""
-          header="Based on provided"
-          paragr="info your property is worth in the <span>$5 - 6.2M range</span> Collider has identified 25 most likely
-            buyers">
-            
-        </Promo>
-        <div className="subcontent_rigth">
-              <label>
-                <input type="radio" name="sale" value="buyers" checked /> Comparables <br />
-              </label>
-              <label>
-                <input type="radio" name="sale" value="brokers" /> Sell with us?<br />
-              </label>
-            </div>
+          <Promo name=""
+            header="Based on provided"
+            paragr="info your property is worth in the <span>$5 - 6.2M range</span> Collider has identified 25 most likely
+              buyers">
+               <div className="subcontent_rigth">
+                <button onClick={this.getBuyers}>Comparables</button>  <br />
+                <button onClick={this.getBrokers}>Sell with us?</button>  <br />
+              </div>
+          </Promo>
         </section>
         <section id="#section5" className="main_content">
-          <div className="content">
-            <div className="subcontent_center asking_price">
-              <form>
-                <div>
-                  Asking Price <br />
-                  <input type="text" name="price" />
-                </div>
-                <div>
-                  <input type="file" id="rent-role" name="rent-role" accept=".doc, .docx, .txt, .pdf, .md" multiple />
-                  <label for="rent-role" className="btn-attach">
-                    <i className="fas fa-paperclip"></i> Attach Rent Roll & Expenses
-              </label>
-                </div>
-                <div>
-                  Comments<br />
-                  <textarea></textarea>
-                </div>
-                <input type="submit" className="btn active" value="Submit" />
-              </form>
-            </div>
-          </div>
+            <AskingForm />
         </section>
         <section id="#section6" className="main_content">
-          <AsqForm 
+          <AsquisForm 
             handleChange={this.onHandleChange}
             />
         </section>

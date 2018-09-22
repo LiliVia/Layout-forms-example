@@ -10,6 +10,7 @@ class Promo extends Component {
             <h1>{this.props.header}</h1>
             <p>{this.props.paragr}</p>
           </div>
+          {this.props.children}
         </div>
       </div>
     );

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 // import './Form.css';
 
-class AsqForm extends Component {
+class AsquisForm extends Component {
 
   handleChange = e => {
     this.props.onHandleChange;
@@ -75,4 +75,4 @@ class AsqForm extends Component {
   }
 }
 
-export default AsqForm;
+export default AsquisForm;
