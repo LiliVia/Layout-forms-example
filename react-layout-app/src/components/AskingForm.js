@@ -7,10 +7,22 @@ class AskingForm extends Component {
     this.fileInput = React.createRef();
   }
 
-  handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(`Your info received!`);
+  handleChange = e => {
+    this.props.onHandleChange;
+  };
+
+  handleFileUpload = (e) => {
+    if (!e.target.files[0]) {
+      return;
+    }
   }
+
+  handleSubmit = e => {
+    e.preventDefault();
+    setTimeout(function () {
+      console.log(`Your info received!`);
+    }, 2000);
+  };
 
   render() {
     return (
@@ -18,17 +30,17 @@ class AskingForm extends Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             Asking Price <br />
-            <input type="text" name="price" />
+            <input type="text" onChange={this.handleChange} value={this.props.askValue} name="price" />
           </label>
           <div>
             <label>
-              <input type="file" ref={this.fileInput} />
+              <input type="file" ref={this.fileInput} onChange={this.handleFileUpload} />
               Attach Rent Roll & Expenses
               </label>
           </div>
           <div>
             Comments<br />
-            <textarea></textarea>
+            <textarea onChange={this.handleChange} value={this.props.comments} name="comments"></textarea>
           </div>
           <button type="submit">Submit</button>
         </form>

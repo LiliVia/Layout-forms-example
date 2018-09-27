@@ -4,13 +4,18 @@ import List from './List';
 
 import './Header.css';
 
+const mainNav = ["Home", "About us", "News", "Contacts"];
+
 class Header extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      mainNav: ["Home", "About us", "News", "Contacts"]
-    };
+
+  handleSearch(e) {
+
   }
+
+  handleChange(e) {
+
+  }
+
   render() {
     return (
       <header className="fixed">
@@ -20,15 +25,13 @@ class Header extends Component {
         <div className="container">
           <nav className="main_menu">
             <List
-              list={this.state.mainNav}
+              list={mainNav}
               type="nav"
               className="item_menu btn"
             />
           </nav>
-          <form className="global_search">
-            <input type="text" name="search_text" id="search_text" placeholder="Search" />
-            <button type="button" name="search_button" id="search_button" value="search"> <i className="fab fa-sistrix"></i>
-            </button>
+          <form className="global_search" onSubmit={this.handleSearch}>
+            <input type="text" name="search_text" onChange={this.handleChange} placeholder="Search..." />
           </form>
         </div>
       </header>
